@@ -43,7 +43,7 @@ resource "aws_instance" "project-EC2Terra" {
   tags = {
     Name = "EC2Terra-instance"
     }
-# code to install minicube-3 
+# code to install minicube-4
   user_data = <<-EOF
   #!/bin/bash
 
