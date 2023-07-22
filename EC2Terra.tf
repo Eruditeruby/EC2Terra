@@ -44,16 +44,16 @@ resource "aws_instance" "project-EC2Terra" {
     Name = "EC2Terra-instance"
     }
 # code to install minicube-3 
-#   user_data = <<-EOF
-#   #!/bin/bash
+  user_data = <<-EOF
+  #!/bin/bash
 
 #   #Install Minikube
-    #  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-    #  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+      curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+      sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 #   # Start Minikube
-#     minikube start
-#     EOF   
+      minikube start
+  EOF   
  }
 
 resource "aws_key_pair" "myseckey" {
