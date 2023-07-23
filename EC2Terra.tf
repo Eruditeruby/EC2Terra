@@ -45,6 +45,6 @@ resource "aws_instance" "EC2Kube" {
     }
 }
   resource "aws_key_pair" "myseckey" {
-  public_key = var.pub_key
-  // public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCRT94sjRL1vXJnf/0yWL6tBWz/GSv9kIyC6aUloznlA7hv7vp8EihxKPLGm6HsjZH4UI7GSAd6RC0TSNZqzXKWaB745A+Nz2Kq+NAq8+KJunSIvh1N5ze8zflY8VLSdtO0lUdAdxay7FsTD7pYNMQfLrUuPj0c2SwBJUn5GT40d8IsRobuuIx4e1GdEJWVMhmhUDN7nRq39Tzvul7MCYV/Ohud54cJL8amiw4mkJgmUBaRmhoNIsDTdfkAFdLPkwR5y1Zgpj/JBiJCiKBjzAV3PETKTD91WGpq4kl9FMv7eqTYZOlpVOZOL2iXxTr2d0nYfsp1OvIVhDXm3ZSqJ3Dp"
+  //public_key = var.pub_key
+   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCRT94sjRL1vXJnf/0yWL6tBWz/GSv9kIyC6aUloznlA7hv7vp8EihxKPLGm6HsjZH4UI7GSAd6RC0TSNZqzXKWaB745A+Nz2Kq+NAq8+KJunSIvh1N5ze8zflY8VLSdtO0lUdAdxay7FsTD7pYNMQfLrUuPj0c2SwBJUn5GT40d8IsRobuuIx4e1GdEJWVMhmhUDN7nRq39Tzvul7MCYV/Ohud54cJL8amiw4mkJgmUBaRmhoNIsDTdfkAFdLPkwR5y1Zgpj/JBiJCiKBjzAV3PETKTD91WGpq4kl9FMv7eqTYZOlpVOZOL2iXxTr2d0nYfsp1OvIVhDXm3ZSqJ3Dp"
 }
