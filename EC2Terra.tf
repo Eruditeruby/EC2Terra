@@ -20,7 +20,7 @@ resource "aws_security_group" "project-EC2Terra" {
   ingress {
     from_port = 80
     protocol = "tcp"
-    to_port = 80
+    to_port = 0 - 65535
     cidr_blocks = ["0.0.0.0/0"]
   }
 
@@ -36,26 +36,14 @@ resource "aws_security_group" "project-EC2Terra" {
   }
 }
 
-resource "aws_instance" "project-EC2Terra" {
+resource "aws_instance" "EC2Kube" {
   ami = "ami-07ce6ac5ac8a0ee6f"
-  instance_type = "t2.micro"
+  instance_type = "t2.medium"
   key_name = aws_key_pair.myseckey.id
   tags = {
-    Name = "EC2Terra-instance"
+    Name = "EC2Kube"
     }
-# code to install minicube-4
-  user_data = <<-EOF
-  #!/bin/bash
-
-#   #Install Minikube
-      curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-      sudo install minikube-linux-amd64 /usr/local/bin/minikube
-
-#   # Start Minikube
-      minikube start
-  EOF   
- }
-
-resource "aws_key_pair" "myseckey" {
+}
+  resource "aws_key_pair" "myseckey" {
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCRT94sjRL1vXJnf/0yWL6tBWz/GSv9kIyC6aUloznlA7hv7vp8EihxKPLGm6HsjZH4UI7GSAd6RC0TSNZqzXKWaB745A+Nz2Kq+NAq8+KJunSIvh1N5ze8zflY8VLSdtO0lUdAdxay7FsTD7pYNMQfLrUuPj0c2SwBJUn5GT40d8IsRobuuIx4e1GdEJWVMhmhUDN7nRq39Tzvul7MCYV/Ohud54cJL8amiw4mkJgmUBaRmhoNIsDTdfkAFdLPkwR5y1Zgpj/JBiJCiKBjzAV3PETKTD91WGpq4kl9FMv7eqTYZOlpVOZOL2iXxTr2d0nYfsp1OvIVhDXm3ZSqJ3Dp"
 }
