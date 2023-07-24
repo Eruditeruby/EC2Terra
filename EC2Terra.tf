@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 
-resource "aws_security_group" "project-EC2Terra" {
+resource "aws_security_group" "EC2_security" {
   name = "EC2Terra"
   description = "EC2Terra Security Group"
 
