@@ -1,2 +1,1 @@
-# EC2Terra
-Ec2Terra-instance
+Terraform code to launch EC2_instance in AWS.
